@@ -1,0 +1,305 @@
+.paymentform {
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+
+.col-25 {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+}
+
+.col-50 {
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+    flex-wrap: wrap;
+}
+
+.col-75 {
+    -ms-flex: 75%;
+    /* IE10 */
+    flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 16px;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn:hover {
+    background-color: #4565a0;
+    box-shadow: #131110;
+}
+
+a {
+    color: #2196F3;
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+.cartDev {
+    width: 300px;
+    height: fit-content;
+    border: 2px;
+    border-color: #24787F;
+    background-color: rgb(107, 154, 197);
+    position: fixed;
+    margin-left: 650px;
+    margin-top: 25px;
+    color: #301c16;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+}
+
+body .taxes {
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main h5 {
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    color: #301c16;
+}
+
+.productRibbon {
+    border-color: #051D0B;
+    width: 400;
+    height: fit-content;
+}
+
+.product_Image {
+    width: 30%;
+    height: 150px;
+    float: left;
+    border: #051D0B;
+    border-style: solid;
+}
+
+.product_description {
+    display: block;
+    width: 65%;
+    float: right;
+    padding-right: 10px;
+}
+
+.userRegistration {
+    display: block;
+    width: 65%;
+    float: left;
+    padding-right: 10px;
+}
+
+.product_description p {
+    text-align: justify;
+}
+
+.purchase_btn:hover {
+    background-color: rgb(63, 73, 68);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.checkout_btn:hover {
+    background-color: rgb(64, 82, 61);
+    color: aliceblue;
+    cursor: pointer;
+    scale: 20%;
+}
+
+.checkout_btn1 {
+    width: 500px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.checkout_btn1:hover {
+    cursor: pointer;
+}
+
+.itemQuantity {
+    width: 50px;
+}
+
+.ErorMessage {
+    display: block;
+}
+
+body .hiddendev {
+    display: none;
+    height: auto;
+}
+
+body {
+    width: 1000px;
+    margin: 30px auto;
+    background-image: url('../images/pexels-miguel-á-padriñán-3930097.jpg');
+    height: auto;
+    outline: #9E4B24;
+}
+
+.background_color {
+    background-color: rgb(199, 199, 178);
+}
+
+header {
+    text-align: center;
+    background-color: #847C64;
+    margin: 0;
+    padding: 20px;
+}
+
+header h1,
+span {
+    font-weight: 200px;
+    color: #131110;
+}
+
+main {
+    width: 61%;
+    padding: 10px 2%;
+    height: auto;
+    background-color: rgb(138, 145, 148);
+}
+
+main .paymentform {
+    width: 61%;
+    float: left;
+    padding: 10px 2%;
+    height: 1562px;
+    background-color: antiquewhite;
+}
+
+main h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+main h4 {
+    margin: 0%;
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    background-color: #CDB184;
+    padding: 20px;
+    color: #211815;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,
+h2 {
+    color: #24787F;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    color: #9E4B24;
+}
+
+footer p {
+    color: #211815;
+    ;
+}
+
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1920px) {}
+
+@media screen and (max-width: 999px) {
+    body {
+        width: 96%;
+        margin: 30px 2%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        float: none;
+        width: 96%;
+        height: 1500;
+    }
+    main p:last-child {
+        margin-bottom: 0px;
+    }
+    .cartDev {
+        margin-left: 0px;
+        margin-top: 0px;
+        position: relative
+    }
+}

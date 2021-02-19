@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 PROG-8185</title>
+
+
+    <link rel="stylesheet" href="../Store Files/css/style.css">
+    <script src="../Store Files/js/Form Validation.js"></script>
+
+
+</head>
+<header>
+    <h1>HUT-E <span>(Assignment 1)</span> </h2>
+</header>
+
+<body>
+    <div id="shopingCart" class="cartDev">
+        <h4>Cart------------ &#128722;</h4>
+
+        <div id="carTDisplay1"></div>
+        <div id="carTDisplay2"></div>
+        <div id="cartDisplaySubTotal"></div>
+        <div id="carTDisplayTaxes"></div>
+        <div id="carTDisplayTotal"></div>
+        <p class="taxes">(Taxes will be concluded at Checkout) </p>
+    </div>
+    <div class="clear"></div>
+
+    <div class="background_color">
+
+        <main>
+            <div id="storeMainPage" class="productRibbon">
+                <div id="product_1" class="productRibbon">
+
+                    <h5>(Item # 1)</h5>
+                    <img class="product_Image" src="images/wrench.jpg" alt=" ">
+
+                    <div class="product1_description">
+                        <p>Description: Or neglected agreeable of discovery concluded oh it sportsman. Week to time in john. Son elegance use weddings separate. Ask too matter formed county wicket oppose talent..</p>
+                        <h4 style="color: chartreuse;"> Price $3</h4>
+
+                        <div class="clear"></div>
+
+                        <form action="Purchase">
+                            <label for="Quantity">Quantity</label>
+                            <input type="number" class="itemQuantity" id="quantity_1" name="quantity" min="1">
+                            <input type="button" class="purchase_btn" value="Add to Cart" onclick="add111ToCart();">
+                            <input type="button" class="checkout_btn" value="Proceed to checkout" onclick="userRegistration();">
+                            <h4 style="display: inline-block;">
+                                <div id="storeErrorMessage1"></div>
+                            </h4>
+                            <h4 style="display: inline-block;">
+                                <div id="storeErrorMessage3"></div>
+                            </h4>
+
+                        </form>
+                    </div>
+                </div>
+                <div id="product_2" class="productRibbon">
+
+                    <h5>(Item # 2)</h5>
+                    <img class="product_Image" src="images/screwDriver.jpg" alt=" ">
+
+                    <div class="product1_description">
+                        <p>Description: Or neglected agreeable of discovery concluded oh it sportsman. Week to time in john. Son elegance use weddings separate. Ask too matter formed county wicket oppose talent..</p>
+                        <h4 style="color: chartreuse;"> Price $5</h4>
+
+                        <div class="clear"></div>
+
+                        <form action="Purchase">
+                            <label for="Quantity">Quantity</label>
+                            <input type="number" class="itemQuantity" id="quantity_2" name="quantity" min="1">
+                            <input type="button" class="purchase_btn" value="Add to Cart" onclick="add222ToCart();">
+                            <input type="button" class="checkout_btn" value="Proceed to checkout" onclick="userRegistration();">
+                            <h4 style="display: inline-block;">
+                                <div id="storeErrorMessage2"></div>
+                            </h4>
+                            <h4 style="display: inline-block;">
+                                <div id="storeErrorMessage4"></div>
+                            </h4>
+
+                        </form>
+                    </div>
+                </div>
+                <div id="product_3" class="productRibbon">
+
+                    <h5>(Item # 3)</h5>
+                    <img class="product_Image" src="images/pexels-miguel-á-padriñán-3930097.jpg" alt=" ">
+
+                    <div class="product1_description">
+                        <p>Description: Or neglected agreeable of discovery concluded oh it sportsman. Week to time in john. Son elegance use weddings separate. Ask too matter formed county wicket oppose talent..</p>
+                        <h4 style="color: chartreuse;"> Price $3</h4>
+
+                        <div class="clear"></div>
+
+                        <form action="Purchase">
+                            <label for="Quantity">Quantity</label>
+                            <input type="number" class="itemQuantity" id="quantity_1" name="quantity" min="1">
+                            <input type="button" class="purchase_btn" value="Add to Cart" onclick="add111ToCart();">
+                            <input type="button" class="checkout_btn" value="Proceed to checkout" onclick="userRegistration();">
+                            <h4 style="display: inline-block;">
+                                <div id="storeErrorMessage1"></div>
+                            </h4>
+                            <h4 style="display: inline-block;">
+                                <div id="storeErrorMessage3"></div>
+                            </h4>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="userRegistration" class="hiddendev">
+                <h2>User Registration</h2><br>
+
+                <p>Please enter your email address and select a Password before proceeding to checkout</p><br>
+
+
+                <form action="User registration_Verification">
+                    <label for="Email Address">User Email:
+                        <input type="email" name="userEmail" style="width: 300px; margin-left: 20px;" placeholder="someone@somewhere.com" id="userEmail"></label> <br>
+                    <label for="password">Choose a Password:   
+                        <input type="password" name="password1"  style="width: 300px; margin-left: 50px;" placeholder="Please choose a unique password" id="chosenPassword"></label><br>
+                    <label for="retypePassword">Retype the Password:
+                        <input type="password" name="password2" style="width: 300px; margin-left: 40px;" placeholder="Re-type the password" id="retypedPassword"></label><br><br>
+
+                    <h4 style="display: inline-block;">
+                        <div id="registrationErrorMessage"></div>
+                    </h4>
+
+
+                    <input type="button" class="checkout_btn" style="display: block;" value="Proceed to checkout" onclick="userVerification();">
+                </form>
+
+
+            </div>
+
+
+            <div id="paymentform" class="hiddendev">
+                <h2>Online Payment and shipping address</h2><br><br><br>
+                <div class="row">
+                    <div class="col-75">
+                        <div class="container">
+                            <form>
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <h3>Billing Address</h3>
+                                        <label for="fullName"> &#128054; Full Name</label>
+                                        <input type="text" id="fullName" name="fullName" placeholder="...As it appears in your statement">
+                                        <label for="email"> &#128231; Email</label>
+                                        <input type="text" id="email" name="email" placeholder="...Awsome@somewhere.com">
+                                        <label for="houseBuilding"> &#127984; House/Building #</label>
+                                        <input type="text" id="house_number" name="house_number" placeholder="...House/Apt./Suit/Building">
+                                        <label for="streetName"> &#128205; Street Name</label>
+                                        <input type="text" id="street" name="Street Name" placeholder="...No special characters ">
+                                        <label for="city"> &#127751; City/Town</label>
+                                        <input type="text" id="city" name="cityName" placeholder="...New York">
+
+                                        <div class="row">
+                                            <div class="col-50">
+                                                <form>
+                                                    <label for="Province"> &#129680; Province:</label>
+                                                    <select name="Province" id="Province" style="width: 75px; height: 40px;">
+                                                    <option value="" >**</option>
+                                                    <option value="Newfoundland Labrador" id="1">NL</option>
+                                                      <option value="Ontario" id="2">ON</option>
+                                                      <option value="British Columbia" id="3">BC</option>
+                                                      <option value="Saskatchewan" id="4">SK</option>
+                                                      <option value="Quebec" id="5">QC</option>
+                                                      <option value="Prince Edward Island" id="6">PE</option>
+                                                      <option value="Manitoba" id="7">MB</option>
+                                                      <option value="Yukon" id="8">YT</option>
+                                                      <option value="Northwest Territories" id="9">NT</option>
+                                                      <option value="Nunavut"id="10">NU</option>
+                                                      <option value="New Brunswick" id="11">NB</option>
+                                                      <option value="NovaScotia" id="12">NS</option>
+                                                      <option value="Alberta" id="13">AB</option>
+
+                                                    </select>
+                                            </div>
+                                            <div class="col-50">
+                                                <label for="zip"> &#128235; Zip</label>
+                                                <input type="text" id="zip" name="zip" placeholder="...X1Y2Z3">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-50">
+                                        <h3>Payment &#128179;</h3>
+                                        <label for="fname">Accepted Cards</label>
+                                        <div class="icon-container">
+                                            <img src="https://www.merchantequip.com/image/?logos=v|m|a|d&height=32" alt="Merchant Equipment Store Credit Card Logos" />
+                                        </div>
+                                        <form>
+                                            <label for="cardType">Card type</label>
+                                            <select name="cardType" id="cardType" style="width: 75px; height: 40px;">
+                                                <option value="Visa" id="Visa">Visa</option>
+                                                <option value="Master Card" id="Master Card">Master Card</option>
+                                                <option value="American Express" id="American Express">American Express</option>
+                                                <option value="Discover" id="Discover">Discover</option>
+                                                
+                                            </select><br> <br>
+                                        </form>
+                                        <label for="cname">Name on Card</label>
+                                        <input type="text" id="cname" name="cardname" placeholder="...As it appears on Card">
+                                        <label for="ccnum">Credit card number (16 Digits)</label>
+                                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                        <label for="expmonth">Exp Month</label>
+                                        <select name="expiration month" id="expiryMonth" style="width: 75px; height: 40px;">
+                                            <option value="" id="NaN">**</option>
+                                            <option value="Jan" id="Jan">01</option>
+                                            <option value="Feb" id="feb">02</option>
+                                            <option value="Mar" id="Mar">03</option>
+                                            <option value="Apl" id="Apl">04</option>
+                                            <option value="May" id="May">05</option>
+                                            <option value="Jun" id="Jun">06</option>
+                                            <option value="Jly" id="Jly">07</option>
+                                            <option value="Agt" id="Agt">08</option>
+                                            <option value="Spt" id="Spt">09</option>
+                                            <option value="oct" id="Oct">10</option>
+                                            <option value="Nov" id="Nov">11</option>
+                                            <option value="Dec" id="Dec">12</option>
+                                        </select><br><br>
+                                        <div class="row">
+                                            <div class="col-50">
+                                                <form>
+                                                    <label for="yearExpiry">Exp. Year:</label>
+                                                    <select name="expiration year" id="expiryYear" style="width: 75px; height: 40px;">
+                                                        <option value="" id="NaN">**</option>
+                                                        <option value="2021" id="1">2021</option>
+                                                        <option value="2022" id="2">2022</option>
+                                                        <option value="2023" id="3">2023</option>
+                                                        <option value="2024" id="4">2024</option>
+                                                        <option value="2025" id="5">2025</option>
+                                                        <option value="2026" id="6">2026</option>
+                                                        <option value="2027" id="7">2027</option>
+                                                        <option value="2028" id="8">2028</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                            <div class="col-50">
+                                                <label for="cvv">CVV</label>
+                                                <input type="text" id="cvv" name="cvv" placeholder="352">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <h4 style="display: inline-block;">
+                    <div id="paymentErrorMessage"></div>
+                </h4>
+
+
+                <input type="button" class="checkout_btn1" style="display: block;" value="Submit Payment Information" onclick="finalizeCheckout();">
+                <h4 style="display: inline-block;">
+                    <div id="taxCalculationDone"></div>
+                </h4>
+            </div>
+            <div id="recieptGeneration" class="hiddendev">
+
+                <h5 style="text-align: center;">Congratulations! &#127881; </h5>
+                <div id="cartDisplay1"></div>
+                <p>Your order has been processed! an Email has been sent to:
+                    <div id="shipping_Email" style="font-weight: bold; color: aqua;"></div> <br> The purchased Items include:
+                    <div id="Purchased Items" style="font-weight: bold; color: aqua;"></div><br> Shipping Address:
+                    <div id="shipping address" style="font-weight: bold; color: maroon ;"></div>
+            </div><br>
+
+
+    </div>
+    </main>
+
+
+    <div class="clear"></div>
+    <footer>
+        <p>
+            &copy; Waqas Bashir Copyright Conestoga College, MSD-Fall 2020
+        </p>
+    </footer>
+    </div>
+
+</body>
+
+</html>
